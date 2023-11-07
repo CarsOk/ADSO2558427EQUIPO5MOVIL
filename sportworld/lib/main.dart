@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'home_page.dart';
 
 void main(){
-  runApp(Miclase());
+  runApp(MyApp());
 }
-class Miclase extends StatelessWidget{
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My App',
+      title: 'SportWorld',
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
