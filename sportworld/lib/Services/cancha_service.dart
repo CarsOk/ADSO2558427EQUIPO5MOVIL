@@ -4,7 +4,7 @@ import 'package:sportworld/models/cancha.dart';
 
 class CanchaService {
   static Future<List<Cancha>> fetchData() async {
-    var url = Uri.parse('https://api-sportworld37-b078035369c6.herokuapp.com//api/canchas');
+    var url = Uri.parse('https://api-sportworld37-b078035369c6.herokuapp.com/api/canchas');
 
     var response = await http.get(url);
 

@@ -10,7 +10,7 @@ class LoadingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(child: SpinKitCubeGrid(
       color: Colors.blue, // Especifica un color
-        size: 50.0,
+        size: 35.0,
     ));
   }
 }

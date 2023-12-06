@@ -4,7 +4,7 @@ import 'package:sportworld/models/usuario.dart';
 
 class UsuarioService {
   static Future<List<Usuario>> fetchData() async {
-    var url = Uri.parse('https://api-sportworld37-b078035369c6.herokuapp.com//api/usuarios');
+    var url = Uri.parse('https://api-sportworld37-b078035369c6.herokuapp.com/api/usuarios');
     
     var response = await http.get(url);
 

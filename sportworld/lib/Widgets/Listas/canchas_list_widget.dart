@@ -14,10 +14,9 @@ class CanchasList extends StatelessWidget {
               itemBuilder: (context, index) {
                 final cancha = canchas[index];
                 return ListTile(
-                  leading: Image.network(''),
-                  trailing: const Icon(Icons.arrow_forward_ios),
-                  title: Text(cancha.nombre, style: TextStyle(color: Colors.white),),
-                  subtitle: Text('Jugadores: ${cancha.jugadores}, Precio: \$${cancha.precio.toStringAsFixed(2)}, Distancia: ${cancha.distancia}', style: TextStyle(color: Colors.white),),
+                  trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white),
+                  title: Text('${cancha.nombre}', style: TextStyle(color: Colors.white),),
+                  subtitle: Text(' Precio: \$${cancha.precio}', style: TextStyle(color: Colors.white),),
                   onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(

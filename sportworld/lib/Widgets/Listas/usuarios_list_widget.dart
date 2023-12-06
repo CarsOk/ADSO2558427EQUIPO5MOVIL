@@ -14,10 +14,9 @@ class UsuariosList extends StatelessWidget{
               itemBuilder: (context, index) {
                 final usuario = usuarios[index];
                 return ListTile(
-                  leading: Image.network('${usuario.imagen}'),
-                  trailing: const Icon(Icons.arrow_forward_ios),
-                  title: Text('${usuario.nombre} ${usuario.apellido}'),
-                  subtitle: Text('Email: ${usuario.email}'),
+                  trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white),
+                  title: Text('${usuario.nombre} ${usuario.apellido}', style: TextStyle(color: Colors.white),),
+                  subtitle: Text('Email: ${usuario.email}', style: TextStyle(color: Colors.white),),
                   onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(

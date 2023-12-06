@@ -4,7 +4,7 @@ import 'package:sportworld/models/reserva.dart'; // Make sure to adjust the impo
 
 class ReservaService {
   static Future<List<Reserva>> fetchData() async {
-    var url = Uri.parse('https://api-sportworld37-b078035369c6.herokuapp.com//api/reservas');
+    var url = Uri.parse('https://api-sportworld37-b078035369c6.herokuapp.com/api/reservas');
 
     var response = await http.get(url);
 

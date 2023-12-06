@@ -13,24 +13,28 @@ class CanchaDatos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detalles de la cancha'),
+        title: Text('Detalles de la cancha', style: TextStyle(color: Colors.white)),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Nombre: ${cancha.nombre}',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      body: Container(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('${cancha.imagen}', style: TextStyle(color: Colors.white)), // Puedes mostrar la imagen aquí
+                SizedBox(height: 10),
+                Text(
+                  '${cancha.id} ${cancha.nombre}',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+                ),
+                SizedBox(height: 10),
+                Text('Precio: ${cancha.precio}', style: TextStyle(color: Colors.white)),
+                SizedBox(height: 10),
+                Text('${cancha.jugadores}', style: TextStyle(color: Colors.white)),
+              ],
             ),
-            SizedBox(height: 10),
-            Text('Correo Electrónico: ${cancha.precio}'),
-            SizedBox(height: 10),
-            Text('Identificación: ${cancha.id}'),
-            SizedBox(height: 10),
-            Text('Imagen: ${cancha.imagen}'), // Puedes mostrar la imagen aquí
-          ],
+          ),
         ),
       ),
     );

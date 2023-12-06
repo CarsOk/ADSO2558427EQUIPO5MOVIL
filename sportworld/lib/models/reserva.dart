@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sportworld/models/cancha.dart';
-import 'package:sportworld/models/usuario.dart';
 
 class Reserva {
   final int id;
