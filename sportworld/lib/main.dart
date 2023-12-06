@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sportworld/Widgets/canchas_list_widget.dart';
-import 'package:sportworld/Widgets/reservas_list_widget.dart';  
-import 'package:sportworld/Widgets/usuarios_list_widget.dart';
+import 'package:sportworld/Widgets/estilos/error_page.dart';
+import 'package:sportworld/Widgets/estilos/home_page.dart';
+import 'package:sportworld/routes/routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,7 +12,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Sport World',
-      home: CanchasListWidget(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(
+          backgroundColor: Colors.black,
+          cardColor: Colors.black,
+        ),
+      ),
+      home: HomePage(),
     );
   }
 }

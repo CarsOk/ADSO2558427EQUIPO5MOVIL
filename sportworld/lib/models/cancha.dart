@@ -4,6 +4,7 @@ class Cancha {
   final int jugadores;
   final double precio;
   final String distancia;
+  final String imagen;
 
   Cancha({
     required this.id,
@@ -11,6 +12,7 @@ class Cancha {
     required this.jugadores,
     required this.precio,
     required this.distancia,
+    required this.imagen,
   });
 
   factory Cancha.fromJson(Map<String, dynamic> json) {
@@ -20,6 +22,7 @@ class Cancha {
       jugadores: json['jugadores'],
       precio: json['precio'].toDouble(),
       distancia: json['distancia'] ?? '',
+      imagen: json['imagen'] ?? '',
     );
   }
 }
