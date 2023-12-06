@@ -14,15 +14,17 @@ class _ReservasListWidgetState extends State<ReservasListWidget> {
       appBar: AppBar(
         title: Text('Lista de Reservas'),
       ),
-      body: FutureBuilder(
+      body: FutureBuilder<List<Reserva>>(
         future: ReservaService.fetchData(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
+          } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+            return Center(child: Text('No hay reservas disponibles.'));
           } else {
-            List<Reserva> reservas = snapshot.data as List<Reserva>;
+            List<Reserva> reservas = snapshot.data!;
             return ListView.builder(
               itemCount: reservas.length,
               itemBuilder: (context, index) {
@@ -33,10 +35,10 @@ class _ReservasListWidgetState extends State<ReservasListWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Fecha: ${reserva.fecha.toString()}'),
-                      Text('Hora Inicio: ${reserva.horaInicio.toString()}'),
-                      Text('Hora Fin: ${reserva.horaFin.toString()}'),
-                      Text('Cancha: ${reserva.cancha.nombre}'),
-                      Text('Usuario: ${reserva.usuario.nombre} ${reserva.usuario.apellido}'),
+                      Text('Hora Inicio: ${reserva.horaInicio.format(context)}'),
+                      Text('Hora Fin: ${reserva.horaFin.format(context)}'),
+                      Text('Cancha: ${reserva.canchaId}'),
+                      Text('Usuario: ${reserva.usuarioId}'),
                       Text('Precio: \$${reserva.precio.toStringAsFixed(2)}'),
                       Text('Duración en Horas: ${reserva.duracionEnHoras.toString()}'),
                     ],

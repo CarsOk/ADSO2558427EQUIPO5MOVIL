@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+import 'package:sportworld/models/usuario.dart';
+import 'package:sportworld/Widgets/Datos/usuario_datos_widget.dart';
+
+class UsuariosList extends StatelessWidget{
+    final List<Usuario> usuarios;
+  const UsuariosList({
+    Key? key,required this.usuarios,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+     return ListView.builder(
+              itemCount: usuarios.length,
+              itemBuilder: (context, index) {
+                final usuario = usuarios[index];
+                return ListTile(
+                  leading: Image.network('${usuario.imagen}'),
+                  trailing: const Icon(Icons.arrow_forward_ios),
+                  title: Text('${usuario.nombre} ${usuario.apellido}'),
+                  subtitle: Text('Email: ${usuario.email}'),
+                  onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (ctx) => UsuarioDatos(usuario: usuario),
+                  ),
+                ),
+                );
+              },
+            );
+          }
+        }

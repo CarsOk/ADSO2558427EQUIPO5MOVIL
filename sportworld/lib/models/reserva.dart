@@ -7,8 +7,8 @@ class Reserva {
   final DateTime fecha;
   final TimeOfDay horaInicio;
   final TimeOfDay horaFin;
-  final Cancha cancha;
-  final Usuario usuario;
+  final int canchaId; // Cambiado para reflejar el nombre en el JSON
+  final int usuarioId; // Cambiado para reflejar el nombre en el JSON
   final DateTime createdAt;
   final DateTime updatedAt;
   final double precio;
@@ -19,8 +19,8 @@ class Reserva {
     required this.fecha,
     required this.horaInicio,
     required this.horaFin,
-    required this.cancha,
-    required this.usuario,
+    required this.canchaId,
+    required this.usuarioId,
     required this.createdAt,
     required this.updatedAt,
     required this.precio,
@@ -33,8 +33,8 @@ class Reserva {
       fecha: DateTime.parse(json['fecha']),
       horaInicio: TimeOfDay.fromDateTime(DateTime.parse(json['hora_inicio'])),
       horaFin: TimeOfDay.fromDateTime(DateTime.parse(json['hora_fin'])),
-      cancha: Cancha.fromJson(json['cancha']),
-      usuario: Usuario.fromJson(json['usuario']),
+      canchaId: json['cancha_id'],
+      usuarioId: json['usuario_id'],
       createdAt: DateTime.parse(json['created_at']),
       updatedAt: DateTime.parse(json['updated_at']),
       precio: json['precio'].toDouble(),
