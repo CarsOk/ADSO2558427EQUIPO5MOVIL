@@ -245,23 +245,28 @@ class DrawerPage extends StatelessWidget {
               width: double.infinity,
               color: Colors.black,
               alignment: Alignment.center,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.logout_outlined,
-                    color: Colors.white, 
-                    size: 20, 
-                  ),
-                  SizedBox(width: 10), 
-                  Text(
-                    "Cerrar sesión",
-                    style: TextStyle(
-                          fontSize: 14,  // Ajusta el tamaño del texto según tus preferencias
-                          fontWeight: FontWeight.bold,  // Opcional: ajusta el peso del texto
-                          color: Colors.white,  // Ajusta el color del texto según tus preferencias
-                        ),
-                  ),
-                ],
+              child: InkWell(
+                onTap: () {
+                  _mostrarDialogoCerrarSesion(context);
+                },
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.logout_outlined,
+                      color: Colors.white, 
+                      size: 20, 
+                    ),
+                    SizedBox(width: 10), 
+                    Text(
+                      "Cerrar sesión",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )
           ],
@@ -269,4 +274,30 @@ class DrawerPage extends StatelessWidget {
       ),
     );
   }
+}
+void _mostrarDialogoCerrarSesion(BuildContext context) { // Add the context parameter
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text("Cerrar Sesión", style: TextStyle(color: Colors.white),),
+        content: Text("¿Estás seguro de que deseas cerrar sesión?", style: TextStyle(color: Colors.white)),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context); // Cerrar el AlertDialog
+            },
+            child: Text("Cancelar", style: TextStyle(color: Colors.white)),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context); // Cerrar el AlertDialog
+              Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+            },
+            child: Text("Aceptar", style: TextStyle(color: Colors.white)),
+          ),
+        ],
+      );
+    },
+  );
 }

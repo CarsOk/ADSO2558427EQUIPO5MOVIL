@@ -10,7 +10,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: DrawerPage(),
       appBar: AppBar(
          title: Text('SPORTWORLD', style: TextStyle(color: Colors.white)),
          iconTheme: IconThemeData(color: Colors.white),
@@ -29,6 +28,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+      drawer: DrawerPage(),
       body: PaginasNavigation(), 
     );
   }

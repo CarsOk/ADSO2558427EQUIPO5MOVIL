@@ -70,7 +70,7 @@ class InfoPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            Icons.book,  
+                            Icons.emoji_events_rounded,  
                             color: Colors.white,  
                             size: 30,  
                           ),
@@ -124,7 +124,7 @@ class InfoPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            Icons.book,  
+                            Icons.engineering_rounded,  
                             color: Colors.white,  
                             size: 30,  
                           ),

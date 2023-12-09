@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sportworld/Widgets/estilos/error_page.dart';
 import 'package:sportworld/Widgets/estilos/home_page.dart';
+import 'package:sportworld/Widgets/pages/formulario.dart';
 import 'package:sportworld/routes/routes.dart';
 
 void main() => runApp(const MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
           cardColor: Colors.black,
         ),
       ),
-      home: HomePage(),
+      initialRoute: "splash",
+      routes: routes
     );
   }
 }

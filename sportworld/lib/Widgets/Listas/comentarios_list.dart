@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sportworld/Widgets/Datos/comentario_datos_widget.dart';
 import 'package:sportworld/models/comentario.dart';
- // Ajusta la importación según tu estructura de carpetas
 
 class ComentariosList extends StatelessWidget {
-  final List<Comentario> comentarios; // Ajusta según tus necesidades
+  final List<Comentario> comentarios; 
 
   const ComentariosList({ 
     Key? key,required this.comentarios, 
@@ -20,9 +20,16 @@ class ComentariosList extends StatelessWidget {
         itemBuilder: (context, index) {
           final comentario = comentarios[index];
           return ListTile(
-            title: Text(comentario.contenido, style: TextStyle(color: Colors.white)),
+            trailing: const Icon(Icons.arrow_forward, color: Colors.white),
+            title: Text(comentario.tipo, style: TextStyle(color: Colors.white)),
             subtitle: Text('Calificación: ${comentario.calificacion}', style: TextStyle(color: Colors.white)),
-          );
+            onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (ctx) => ComentarioDatos(comentario: comentario),
+                  ),
+                ),
+          ); 
         },
       ),
     );
