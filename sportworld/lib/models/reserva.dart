@@ -5,8 +5,8 @@ class Reserva {
   final DateTime fecha;
   final TimeOfDay horaInicio;
   final TimeOfDay horaFin;
-  final int canchaId; // Cambiado para reflejar el nombre en el JSON
-  final int usuarioId; // Cambiado para reflejar el nombre en el JSON
+  final int canchaId; 
+  final int usuarioId; 
   final DateTime createdAt;
   final DateTime updatedAt;
   final double precio;

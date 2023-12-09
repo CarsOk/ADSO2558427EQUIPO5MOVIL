@@ -16,10 +16,10 @@ class ReservasList extends StatelessWidget {
       itemBuilder: (BuildContext context, index) {
         final reserva = reservas[index];
         return ListTile(
-          trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white),
+          trailing: const Icon(Icons.arrow_forward, color: Colors.white),
           title: Text('${reserva.id}', style: TextStyle(color: Colors.white)),
           subtitle: Text('Fecha: ${reserva.fecha}', style: TextStyle(color: Colors.white),),
-          onTap: () =>(
+          onTap: () => Navigator.push(
             context,
             MaterialPageRoute(builder: (ctx) => ReservaDatos(reserva: reserva))
           ),
