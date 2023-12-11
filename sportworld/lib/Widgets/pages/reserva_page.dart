@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sportworld/Services/reserva_service.dart';
+import 'package:sportworld/Services/Lista/reservas_service.dart';
 import 'package:sportworld/Widgets/Listas/reservas_list_widget.dart';
 import 'package:sportworld/Widgets/estilos/error_page.dart';
 import 'package:sportworld/Widgets/estilos/loading_page.dart';
@@ -11,7 +11,7 @@ class ReservaPage extends StatelessWidget {
   Future<List<Reserva>> fetchData() async {
     // Lógica para obtener datos de CanchaService
     // Supongamos que CanchaService tiene un método llamado fetchData que retorna una lista de canchas.
-    return ReservaService.fetchData();
+    return ReservasService.fetchData();
   }
 
   @override

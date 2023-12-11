@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sportworld/Services/comentario_service.dart';
+import 'package:sportworld/Services/Lista/comentarios_service.dart';
 import 'package:sportworld/Widgets/Listas/comentarios_list.dart';
 import 'package:sportworld/Widgets/estilos/error_page.dart';
 import 'package:sportworld/Widgets/estilos/loading_page.dart';
@@ -11,7 +11,7 @@ class ComentarioPage extends StatelessWidget {
   Future<List<Comentario>> fetchData() async {
     // Lógica para obtener datos de ComentarioService
     // Supongamos que ComentarioService tiene un método llamado fetchData que retorna una lista de comentarios.
-    return ComentarioService.fetchData();
+    return ComentariosService.fetchData();
   }
 
   @override

@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:sportworld/models/usuario.dart';
 
-class UsuarioService {
+class UsuariosService {
   static Future<List<Usuario>> fetchData() async {
     var url = Uri.parse('https://api-sportworld37-b078035369c6.herokuapp.com/api/usuarios');
     

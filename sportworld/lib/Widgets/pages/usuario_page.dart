@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sportworld/Services/usuario_service.dart';
+import 'package:sportworld/Services/Lista/usuarios_service.dart';
 import 'package:sportworld/Widgets/Listas/usuarios_list_widget.dart';
 import 'package:sportworld/Widgets/estilos/error_page.dart';
 import 'package:sportworld/Widgets/estilos/loading_page.dart';
@@ -11,7 +11,7 @@ class UsuarioPage extends StatelessWidget {
   Future<List<Usuario>> fetchData() async {
     // Lógica para obtener datos de CanchaService
     // Supongamos que CanchaService tiene un método llamado fetchData que retorna una lista de canchas.
-    return UsuarioService.fetchData();
+    return UsuariosService.fetchData();
   }
 
   @override

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sportworld/Widgets/pages/cancha_page.dart';
 import 'package:sportworld/Widgets/pages/comentario_page.dart';
 import 'package:sportworld/Widgets/pages/home_page.dart';
+import 'package:sportworld/Widgets/pages/perfil_page.dart';
 import 'package:sportworld/Widgets/pages/reserva_page.dart';
 import 'package:sportworld/Widgets/pages/usuario_page.dart';
 
@@ -68,7 +69,7 @@ class DrawerPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomePage(),  // Cambia MiPerfilPage por la página de perfil que desees
+                      builder: (context) => PerfilPage(),  // Cambia MiPerfilPage por la página de perfil que desees
                     ),
                   );
                 },
@@ -132,7 +133,6 @@ class DrawerPage extends StatelessWidget {
               ),
             ),
           ),
-
             GestureDetector(
               onTap: () {
                 // Coloca aquí la lógica de navegación para la página de Reservas

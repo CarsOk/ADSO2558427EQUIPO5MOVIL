@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:sportworld/models/reserva.dart'; // Make sure to adjust the import path
 
-class ReservaService {
+class ReservasService {
   static Future<List<Reserva>> fetchData() async {
     var url = Uri.parse('https://api-sportworld37-b078035369c6.herokuapp.com/api/reservas');
 

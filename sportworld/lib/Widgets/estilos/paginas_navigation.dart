@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sportworld/Widgets/pages/cancha_page.dart';
 import 'package:sportworld/Widgets/pages/info_page.dart';
+import 'package:sportworld/Widgets/pages/perfil_page.dart';
 import 'package:sportworld/Widgets/pages/usuario_page.dart';
 
 class PaginasNavigation extends StatefulWidget {
@@ -13,8 +14,8 @@ class _PaginasNavigationState extends State<PaginasNavigation> {
 
   List<Widget> _paginas = [
     InfoPage(),
-    UsuarioPage(),
     CanchaPage(),
+    PerfilPage()
   ];
 
   @override
@@ -33,9 +34,9 @@ class _PaginasNavigationState extends State<PaginasNavigation> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.supervised_user_circle), label: "usuarios"),
-          BottomNavigationBarItem(
               icon: Icon(Icons.sports_soccer), label: "canchas"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle_outlined), label: "Perfil"),
         ],
         selectedItemColor: Color(0xFF47B2E4),
         unselectedItemColor: Colors.white,
