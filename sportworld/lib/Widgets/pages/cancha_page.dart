@@ -19,6 +19,7 @@ class CanchaPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Lista de Canchas', style: TextStyle(color: Colors.white)),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: FutureBuilder(
         builder: (context, AsyncSnapshot<List<Cancha>> snapshot) {

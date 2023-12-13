@@ -19,6 +19,7 @@ class ReservaPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Lista de Reservas', style: TextStyle(color: Colors.white)),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: FutureBuilder(
         builder: (context, AsyncSnapshot<List<Reserva>> snapshot) {

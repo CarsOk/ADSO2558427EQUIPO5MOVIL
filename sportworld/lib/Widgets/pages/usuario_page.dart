@@ -19,6 +19,7 @@ class UsuarioPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Lista de Usuarios', style: TextStyle(color: Colors.white)),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: FutureBuilder(
         builder: (context, AsyncSnapshot<List<Usuario>> snapshot) {

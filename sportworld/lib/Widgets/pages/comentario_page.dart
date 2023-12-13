@@ -19,6 +19,7 @@ class ComentarioPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Lista de Comentarios', style: TextStyle(color: Colors.white)),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: FutureBuilder(
         builder: (context, AsyncSnapshot<List<Comentario>> snapshot) {
